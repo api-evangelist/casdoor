@@ -1,0 +1,38 @@
+aid: casdoor
+name: Casdoor
+description: >-
+  Casdoor is an open source identity and access management platform with a web UI supporting OAuth 2.0, OIDC, SAML, LDAP, and multi-factor authentication.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Authentication
+  - Open Source
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/casdoor/refs/heads/main/apis.yml
+created: '2026-03-25'
+modified: '2026-03-25'
+specificationVersion: '0.19'
+apis:
+  - aid: casdoor:casdoor
+    name: Casdoor
+    description: >-
+      Casdoor is an open source identity and access management platform with a web UI supporting OAuth 2.0, OIDC, SAML, LDAP, and multi-factor authentication.
+    humanURL: https://casdoor.org
+    tags:
+      - Authentication
+      - Open Source
+    properties:
+      - type: Documentation
+        url: https://casdoor.org/docs/overview
+      - type: GitHub Repository
+        url: https://github.com/casdoor/casdoor
+common:
+  - type: Website
+    url: https://casdoor.org
+  - type: Documentation
+    url: https://casdoor.org/docs/overview
+  - type: GitHub Organization
+    url: https://github.com/casdoor/casdoor
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
