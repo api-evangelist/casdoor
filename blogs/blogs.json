@@ -1,0 +1,13 @@
+{
+  "repo": "casdoor",
+  "feeds": [
+    {
+      "source": "https://casdoor.org/blog",
+      "feed_url": "https://casdoor.ai/blog/rss.xml",
+      "saved": 3,
+      "title": "Casdoor \u00b7 AI-Native Identity and Access Management (IAM) / SSO Platform with MCP Server Blog"
+    }
+  ],
+  "post_count": 3,
+  "fetched": "2026-05-03T23:25:02Z"
+}
