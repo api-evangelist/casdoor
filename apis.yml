@@ -60,7 +60,7 @@ apis:
         url: https://casdoor.ai/docs/basic/api
       - type: Swagger
         url: https://door.casdoor.com/swagger/
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/casdoor/casdoor
       - type: Authentication
         url: https://casdoor.ai/docs/basic/core-concepts
