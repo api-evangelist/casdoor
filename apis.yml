@@ -32,7 +32,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/casdoor/refs/heads/main/apis.yml
 created: '2026-03-25'
-modified: '2026-04-23'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
   - aid: casdoor:casdoor-rest-api
@@ -268,6 +268,9 @@ common:
       - name: Beego
       - name: React
       - name: Casbin
+  - name: MCP Server
+    url: https://github.com/casdoor/public-mcp-server-registry
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
