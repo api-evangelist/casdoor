@@ -1,0 +1,445 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Casdoor REST API",
+    "version": "1.503.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OIDC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "OIDC discovery document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/openid-configuration"
+          },
+          "docs": "OIDC discovery document"
+        },
+        {
+          "info": {
+            "name": "JSON Web Key Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/jwks"
+          },
+          "docs": "JSON Web Key Set"
+        },
+        {
+          "info": {
+            "name": "WebFinger user lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/webfinger",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "WebFinger user lookup"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Login a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/login",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Login a user"
+        },
+        {
+          "info": {
+            "name": "Sign up a new user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/signup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sign up a new user"
+        },
+        {
+          "info": {
+            "name": "Log out the current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/logout"
+          },
+          "docs": "Log out the current user"
+        },
+        {
+          "info": {
+            "name": "OAuth 2.0 device authorization",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/device-auth"
+          },
+          "docs": "OAuth 2.0 device authorization"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users in an organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-users",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query",
+                "description": "Organization name"
+              }
+            ]
+          },
+          "docs": "List users in an organization"
+        },
+        {
+          "info": {
+            "name": "List all users across organizations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-global-users"
+          },
+          "docs": "List all users across organizations"
+        },
+        {
+          "info": {
+            "name": "Get a single user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-user",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Composite id in form owner/name"
+              }
+            ]
+          },
+          "docs": "Get a single user"
+        },
+        {
+          "info": {
+            "name": "Create a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a user"
+        },
+        {
+          "info": {
+            "name": "Update a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/update-user",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a user"
+        },
+        {
+          "info": {
+            "name": "Delete a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/delete-user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a user"
+        },
+        {
+          "info": {
+            "name": "Validate a user password",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/check-user-password",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Validate a user password"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Organizations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List organizations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-organizations",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List organizations"
+        },
+        {
+          "info": {
+            "name": "Create an organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-organization",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an organization"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-applications",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List applications"
+        },
+        {
+          "info": {
+            "name": "Get an application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-application",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get an application"
+        },
+        {
+          "info": {
+            "name": "Create an application",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-application",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an application"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Roles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-roles",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List roles"
+        },
+        {
+          "info": {
+            "name": "Create a role",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-role",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a role"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Permissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Casbin enforcement check",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/enforce",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Casbin enforcement check"
+        },
+        {
+          "info": {
+            "name": "Batch Casbin enforcement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/batch-enforce",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Batch Casbin enforcement"
+        },
+        {
+          "info": {
+            "name": "List permissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-permissions",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List permissions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

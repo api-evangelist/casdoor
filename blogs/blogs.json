@@ -2,8 +2,8 @@
   "repo": "casdoor",
   "feeds": [
     {
-      "source": "https://casdoor.org/blog/rss",
-      "feed_url": "https://casdoor.org/blog/rss",
+      "source": "https://casdoor.ai/blog/rss",
+      "feed_url": "https://casdoor.ai/blog/rss",
       "title": "",
       "saved": 0,
       "method": "feed"
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 4,
-  "fetched": "2026-06-01T23:35:02Z"
+  "fetched": "2026-06-14T20:42:17Z"
 }
