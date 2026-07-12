@@ -181,6 +181,10 @@ apis:
       - type: Documentation
         url: https://casdoor.ai/docs/integration/webhook
 common:
+  - type: DomainSecurity
+    url: security/casdoor-domain-security.yml
+  - type: Authentication
+    url: authentication/casdoor-authentication.yml
   - type: Website
     url: https://casdoor.org
   - type: Documentation
