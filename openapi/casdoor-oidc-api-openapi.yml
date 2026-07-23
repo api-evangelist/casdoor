@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Casdoor REST Applications OIDC API
+  description: 'Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing
+
+    users, organizations, applications, roles, permissions, sessions, and OIDC/OAuth
+
+    flows. This best-effort OpenAPI is derived from the public Swagger published at
+
+    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.
+
+    '
+  version: 1.503.0
+  contact:
+    name: Casdoor (Casbin)
+    email: casbin@googlegroups.com
+    url: https://casdoor.ai/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://door.casdoor.com
+  description: Casdoor public demo instance
+- url: https://{host}
+  description: Self-hosted Casdoor instance
+  variables:
+    host:
+      default: localhost:8000
+security:
+- bearerAuth: []
+- basicAuth: []
+tags:
+- name: OIDC
+  description: OpenID Connect discovery and JWKS endpoints
+paths:
+  /.well-known/openid-configuration:
+    get:
+      tags:
+      - OIDC
+      summary: OIDC discovery document
+      operationId: getOidcDiscovery
+      responses:
+        '200':
+          description: OIDC discovery metadata
+          content:
+            application/json:
+              schema:
+                type: object
+  /.well-known/jwks:
+    get:
+      tags:
+      - OIDC
+      summary: JSON Web Key Set
+      operationId: getJwks
+      responses:
+        '200':
+          description: JWKS containing signing keys
+          content:
+            application/json:
+              schema:
+                type: object
+  /.well-known/webfinger:
+    get:
+      tags:
+      - OIDC
+      summary: WebFinger user lookup
+      operationId: getWebfinger
+      parameters:
+      - in: query
+        name: resource
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: WebFinger metadata
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:
+      type: http
+      scheme: basic

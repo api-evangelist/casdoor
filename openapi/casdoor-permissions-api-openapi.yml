@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Casdoor REST Applications Permissions API
+  description: 'Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing
+
+    users, organizations, applications, roles, permissions, sessions, and OIDC/OAuth
+
+    flows. This best-effort OpenAPI is derived from the public Swagger published at
+
+    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.
+
+    '
+  version: 1.503.0
+  contact:
+    name: Casdoor (Casbin)
+    email: casbin@googlegroups.com
+    url: https://casdoor.ai/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://door.casdoor.com
+  description: Casdoor public demo instance
+- url: https://{host}
+  description: Self-hosted Casdoor instance
+  variables:
+    host:
+      default: localhost:8000
+security:
+- bearerAuth: []
+- basicAuth: []
+tags:
+- name: Permissions
+  description: Casbin policy enforcement
+paths:
+  /api/enforce:
+    post:
+      tags:
+      - Permissions
+      summary: Casbin enforcement check
+      operationId: enforce
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                v0:
+                  type: string
+                v1:
+                  type: string
+                v2:
+                  type: string
+      responses:
+        '200':
+          description: Enforcement decision
+  /api/batch-enforce:
+    post:
+      tags:
+      - Permissions
+      summary: Batch Casbin enforcement
+      operationId: batchEnforce
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+      responses:
+        '200':
+          description: Batch enforcement decisions
+  /api/get-permissions:
+    get:
+      tags:
+      - Permissions
+      summary: List permissions
+      operationId: getPermissions
+      parameters:
+      - in: query
+        name: owner
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Permission list
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:
+      type: http
+      scheme: basic

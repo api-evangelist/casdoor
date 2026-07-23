@@ -1,0 +1,191 @@
+openapi: 3.1.0
+info:
+  title: Casdoor REST Applications Users API
+  description: 'Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing
+
+    users, organizations, applications, roles, permissions, sessions, and OIDC/OAuth
+
+    flows. This best-effort OpenAPI is derived from the public Swagger published at
+
+    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.
+
+    '
+  version: 1.503.0
+  contact:
+    name: Casdoor (Casbin)
+    email: casbin@googlegroups.com
+    url: https://casdoor.ai/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://door.casdoor.com
+  description: Casdoor public demo instance
+- url: https://{host}
+  description: Self-hosted Casdoor instance
+  variables:
+    host:
+      default: localhost:8000
+security:
+- bearerAuth: []
+- basicAuth: []
+tags:
+- name: Users
+  description: User CRUD and credential operations
+paths:
+  /api/get-users:
+    get:
+      tags:
+      - Users
+      summary: List users in an organization
+      operationId: getUsers
+      parameters:
+      - in: query
+        name: owner
+        required: true
+        description: Organization name
+        schema:
+          type: string
+      responses:
+        '200':
+          description: User list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+  /api/get-global-users:
+    get:
+      tags:
+      - Users
+      summary: List all users across organizations
+      operationId: getGlobalUsers
+      responses:
+        '200':
+          description: Global user list
+  /api/get-user:
+    get:
+      tags:
+      - Users
+      summary: Get a single user
+      operationId: getUser
+      parameters:
+      - in: query
+        name: id
+        required: true
+        description: Composite id in form owner/name
+        schema:
+          type: string
+      responses:
+        '200':
+          description: User
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+  /api/add-user:
+    post:
+      tags:
+      - Users
+      summary: Create a user
+      operationId: addUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Create result
+  /api/update-user:
+    post:
+      tags:
+      - Users
+      summary: Update a user
+      operationId: updateUser
+      parameters:
+      - in: query
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Update result
+  /api/delete-user:
+    post:
+      tags:
+      - Users
+      summary: Delete a user
+      operationId: deleteUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Delete result
+  /api/check-user-password:
+    post:
+      tags:
+      - Users
+      summary: Validate a user password
+      operationId: checkUserPassword
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                organization:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Password check result
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        owner:
+          type: string
+        name:
+          type: string
+        displayName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        avatar:
+          type: string
+        password:
+          type: string
+        type:
+          type: string
+        createdTime:
+          type: string
+          format: date-time
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:
+      type: http
+      scheme: basic

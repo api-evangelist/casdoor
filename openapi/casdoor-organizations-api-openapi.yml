@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: Casdoor REST Applications Organizations API
+  description: 'Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing
+
+    users, organizations, applications, roles, permissions, sessions, and OIDC/OAuth
+
+    flows. This best-effort OpenAPI is derived from the public Swagger published at
+
+    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.
+
+    '
+  version: 1.503.0
+  contact:
+    name: Casdoor (Casbin)
+    email: casbin@googlegroups.com
+    url: https://casdoor.ai/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://door.casdoor.com
+  description: Casdoor public demo instance
+- url: https://{host}
+  description: Self-hosted Casdoor instance
+  variables:
+    host:
+      default: localhost:8000
+security:
+- bearerAuth: []
+- basicAuth: []
+tags:
+- name: Organizations
+  description: Multi-tenant organization management
+paths:
+  /api/get-organizations:
+    get:
+      tags:
+      - Organizations
+      summary: List organizations
+      operationId: getOrganizations
+      parameters:
+      - in: query
+        name: owner
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Organization list
+  /api/add-organization:
+    post:
+      tags:
+      - Organizations
+      summary: Create an organization
+      operationId: addOrganization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Organization'
+      responses:
+        '200':
+          description: Create result
+components:
+  schemas:
+    Organization:
+      type: object
+      properties:
+        owner:
+          type: string
+        name:
+          type: string
+        displayName:
+          type: string
+        websiteUrl:
+          type: string
+        favicon:
+          type: string
+        passwordType:
+          type: string
+        passwordSalt:
+          type: string
+        countryCodes:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    basicAuth:
+      type: http
+      scheme: basic
