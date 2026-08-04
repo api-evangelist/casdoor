@@ -1,0 +1,26 @@
+{
+  "provider": "casdoor",
+  "sources": [
+    "casdoor-applications-api-openapi.yml",
+    "casdoor-authentication-api-openapi.yml",
+    "casdoor-oidc-api-openapi.yml",
+    "casdoor-organizations-api-openapi.yml",
+    "casdoor-permissions-api-openapi.yml",
+    "casdoor-roles-api-openapi.yml",
+    "casdoor-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "casdoor-applications-api-openapi.yml",
+    "casdoor-authentication-api-openapi.yml",
+    "casdoor-oidc-api-openapi.yml",
+    "casdoor-organizations-api-openapi.yml",
+    "casdoor-permissions-api-openapi.yml",
+    "casdoor-roles-api-openapi.yml",
+    "casdoor-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
