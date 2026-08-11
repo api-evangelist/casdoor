@@ -255,6 +255,10 @@ apis:
   - type: OpenAPI
     url: openapi/casdoor-users-api-openapi.yml
 common:
+  - type: Releases
+    url: https://github.com/casdoor/casdoor/releases
+  - type: SecurityPolicy
+    url: https://github.com/casdoor/casdoor/blob/master/SECURITY.md
   - type: AgenticAccess
     url: agentic-access/casdoor-agentic-access.yml
   - type: DomainSecurity
