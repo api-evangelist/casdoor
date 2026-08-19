@@ -1,0 +1,289 @@
+{
+  "item": [
+    {
+      "id": "19dc98af-c33d-4c5a-a20d-08ca5500ffe6",
+      "name": "Applications",
+      "description": {
+        "content": "OAuth/OIDC client applications",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "65a4a3ad-d636-4faa-aebd-cb3825937ed1",
+          "name": "List applications",
+          "request": {
+            "name": "List applications",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-applications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "owner",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ceeb5886-7e06-4214-86c4-e50a5a1d6bdb",
+              "name": "Application list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-applications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "owner",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9f2c4d3a-67ce-4fe9-9c8b-33285f215626",
+          "name": "Get an application",
+          "request": {
+            "name": "Get an application",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-application"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e9ef0de0-8d0a-47a5-926b-da30aca5a66c",
+              "name": "Application",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-application"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0ed252e1-8a48-4649-b490-48f359f0a8a2",
+          "name": "Create an application",
+          "request": {
+            "name": "Create an application",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "add-application"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "41ca3951-65c3-4d9d-a338-9911c7cd8a84",
+              "name": "Create result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "add-application"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://door.casdoor.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "99f7e877-59d5-4bc9-8103-6f6dc7f2fc3d",
+    "name": "Casdoor REST Applications API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing\nusers, organizations, applications, roles, permissions, sessions, and OIDC/OAuth\nflows. This best-effort OpenAPI is derived from the public Swagger published at\nhttps://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.\n\n\nContact Support:\n Name: Casdoor (Casbin)\n Email: casbin@googlegroups.com",
+      "type": "text/plain"
+    }
+  }
+}

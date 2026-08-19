@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Casdoor REST Applications API",
+    "version": "1.503.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-applications",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List applications"
+        },
+        {
+          "info": {
+            "name": "Get an application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-application",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get an application"
+        },
+        {
+          "info": {
+            "name": "Create an application",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-application",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an application"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

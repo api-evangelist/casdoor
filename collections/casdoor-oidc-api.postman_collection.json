@@ -1,0 +1,274 @@
+{
+  "item": [
+    {
+      "id": "1fe8dd9e-5d9f-4613-9da0-284ef12e8a0a",
+      "name": "OIDC",
+      "description": {
+        "content": "OpenID Connect discovery and JWKS endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "92fec081-9896-43a8-a2b5-6bc31f36bb47",
+          "name": "OIDC discovery document",
+          "request": {
+            "name": "OIDC discovery document",
+            "description": {},
+            "url": {
+              "path": [
+                ".well-known",
+                "openid-configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bdc596c9-c0d1-4635-bf6f-9841cdaeeb8d",
+              "name": "OIDC discovery metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ".well-known",
+                    "openid-configuration"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "edd138ed-0f51-449e-ab60-033f1d807241",
+          "name": "JSON Web Key Set",
+          "request": {
+            "name": "JSON Web Key Set",
+            "description": {},
+            "url": {
+              "path": [
+                ".well-known",
+                "jwks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0de12926-4760-4c47-8cfc-0775894302ae",
+              "name": "JWKS containing signing keys",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ".well-known",
+                    "jwks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "622e8755-fd61-4bdd-93bb-315858536439",
+          "name": "WebFinger user lookup",
+          "request": {
+            "name": "WebFinger user lookup",
+            "description": {},
+            "url": {
+              "path": [
+                ".well-known",
+                "webfinger"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "resource",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "31bbc7c1-bfd6-49fd-a64f-3a15762da031",
+              "name": "WebFinger metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ".well-known",
+                    "webfinger"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "resource",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://door.casdoor.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2746ef98-4ed6-4c44-8822-ac60518b4e1a",
+    "name": "Casdoor REST Applications OIDC API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing\nusers, organizations, applications, roles, permissions, sessions, and OIDC/OAuth\nflows. This best-effort OpenAPI is derived from the public Swagger published at\nhttps://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.\n\n\nContact Support:\n Name: Casdoor (Casbin)\n Email: casbin@googlegroups.com",
+      "type": "text/plain"
+    }
+  }
+}

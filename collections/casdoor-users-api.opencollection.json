@@ -1,0 +1,140 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Casdoor REST Applications Users API",
+    "version": "1.503.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users in an organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-users",
+            "params": [
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query",
+                "description": "Organization name"
+              }
+            ]
+          },
+          "docs": "List users in an organization"
+        },
+        {
+          "info": {
+            "name": "List all users across organizations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-global-users"
+          },
+          "docs": "List all users across organizations"
+        },
+        {
+          "info": {
+            "name": "Get a single user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/api/get-user",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "Composite id in form owner/name"
+              }
+            ]
+          },
+          "docs": "Get a single user"
+        },
+        {
+          "info": {
+            "name": "Create a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/add-user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a user"
+        },
+        {
+          "info": {
+            "name": "Update a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/update-user",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a user"
+        },
+        {
+          "info": {
+            "name": "Delete a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/delete-user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a user"
+        },
+        {
+          "info": {
+            "name": "Validate a user password",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/check-user-password",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Validate a user password"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,658 @@
+{
+  "item": [
+    {
+      "id": "a7e580c5-3462-44b8-891b-d6e849357edd",
+      "name": "Users",
+      "description": {
+        "content": "User CRUD and credential operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "26dd1a24-21f3-4058-bd41-04c2fe385d86",
+          "name": "List users in an organization",
+          "request": {
+            "name": "List users in an organization",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "owner",
+                  "value": "<string>",
+                  "description": "(Required) Organization name"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b0d1b0af-aecd-4b41-95a3-0614cfbb5dd4",
+              "name": "User list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "owner",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"owner\": \"string\",\n    \"name\": \"string\",\n    \"displayName\": \"string\",\n    \"email\": \"string\",\n    \"phone\": \"string\",\n    \"avatar\": \"string\",\n    \"password\": \"string\",\n    \"type\": \"string\",\n    \"createdTime\": \"1983-12-05T15:02:57.156Z\"\n  },\n  {\n    \"owner\": \"string\",\n    \"name\": \"string\",\n    \"displayName\": \"string\",\n    \"email\": \"string\",\n    \"phone\": \"string\",\n    \"avatar\": \"string\",\n    \"password\": \"string\",\n    \"type\": \"string\",\n    \"createdTime\": \"1946-10-06T02:56:48.919Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e9d682c-ab6e-4b17-864d-7b12b8c08d34",
+          "name": "List all users across organizations",
+          "request": {
+            "name": "List all users across organizations",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-global-users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "15b83976-c384-4803-922a-c9b6bf1287b7",
+              "name": "Global user list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-global-users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0a7928c9-5b20-443b-ae75-5a5d66def424",
+          "name": "Get a single user",
+          "request": {
+            "name": "Get a single user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) Composite id in form owner/name"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77a2532f-54d3-4583-b48c-0dce2870cedc",
+              "name": "User",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"owner\": \"string\",\n  \"name\": \"string\",\n  \"displayName\": \"string\",\n  \"email\": \"string\",\n  \"phone\": \"string\",\n  \"avatar\": \"string\",\n  \"password\": \"string\",\n  \"type\": \"string\",\n  \"createdTime\": \"1972-10-18T15:50:58.725Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2a9602f-64c1-49bd-919c-6218b5f04a2d",
+          "name": "Create a user",
+          "request": {
+            "name": "Create a user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "add-user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e768e722-35e0-42ca-8d4b-362a2bb3417f",
+              "name": "Create result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "add-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dcc46207-c4e6-4b92-8712-bd785b54b40d",
+          "name": "Update a user",
+          "request": {
+            "name": "Update a user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "update-user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d2285d2b-0fe5-457b-a96b-6deab7510337",
+              "name": "Update result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "update-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d9f1399-3f4c-4cfd-8873-4815d12dc1fa",
+          "name": "Delete a user",
+          "request": {
+            "name": "Delete a user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "delete-user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f9faa917-14a8-44ab-8849-f093bd9ded0e",
+              "name": "Delete result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "delete-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"avatar\": \"<string>\",\n  \"password\": \"<string>\",\n  \"type\": \"<string>\",\n  \"createdTime\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "49ab4f6b-5049-465f-9458-fb3f262008dd",
+          "name": "Validate a user password",
+          "request": {
+            "name": "Validate a user password",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "check-user-password"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"organization\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3d10d6be-f28f-452b-9da6-52367c84fbc4",
+              "name": "Password check result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "check-user-password"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"organization\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://door.casdoor.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "4447a087-2e37-48b1-8348-425e07caf4b7",
+    "name": "Casdoor REST Applications Users API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing\nusers, organizations, applications, roles, permissions, sessions, and OIDC/OAuth\nflows. This best-effort OpenAPI is derived from the public Swagger published at\nhttps://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.\n\n\nContact Support:\n Name: Casdoor (Casbin)\n Email: casbin@googlegroups.com",
+      "type": "text/plain"
+    }
+  }
+}

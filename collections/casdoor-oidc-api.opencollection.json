@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Casdoor REST Applications OIDC API",
+    "version": "1.503.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OIDC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "OIDC discovery document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/openid-configuration"
+          },
+          "docs": "OIDC discovery document"
+        },
+        {
+          "info": {
+            "name": "JSON Web Key Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/jwks"
+          },
+          "docs": "JSON Web Key Set"
+        },
+        {
+          "info": {
+            "name": "WebFinger user lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://door.casdoor.com/.well-known/webfinger",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "WebFinger user lookup"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

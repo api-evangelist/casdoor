@@ -1,0 +1,210 @@
+{
+  "item": [
+    {
+      "id": "22626463-fe44-4af3-9dcd-034d64c9f407",
+      "name": "Organizations",
+      "description": {
+        "content": "Multi-tenant organization management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c11d0cb4-e8c9-41bc-8692-09208da46784",
+          "name": "List organizations",
+          "request": {
+            "name": "List organizations",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "owner",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95efa216-d098-42d4-a491-2b8925cfd0ec",
+              "name": "Organization list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "owner",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "11687520-0107-432f-8f76-cd872825fb54",
+          "name": "Create an organization",
+          "request": {
+            "name": "Create an organization",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "add-organization"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"websiteUrl\": \"<string>\",\n  \"favicon\": \"<string>\",\n  \"passwordType\": \"<string>\",\n  \"passwordSalt\": \"<string>\",\n  \"countryCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d52be16e-f538-49f0-8443-aca6ac149926",
+              "name": "Create result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "add-organization"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"owner\": \"<string>\",\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"websiteUrl\": \"<string>\",\n  \"favicon\": \"<string>\",\n  \"passwordType\": \"<string>\",\n  \"passwordSalt\": \"<string>\",\n  \"countryCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://door.casdoor.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ad07a400-56b3-4525-ab2d-1b7467be14cc",
+    "name": "Casdoor REST Applications Organizations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing\nusers, organizations, applications, roles, permissions, sessions, and OIDC/OAuth\nflows. This best-effort OpenAPI is derived from the public Swagger published at\nhttps://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.\n\n\nContact Support:\n Name: Casdoor (Casbin)\n Email: casbin@googlegroups.com",
+      "type": "text/plain"
+    }
+  }
+}

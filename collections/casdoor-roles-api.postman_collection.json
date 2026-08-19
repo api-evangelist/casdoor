@@ -1,0 +1,210 @@
+{
+  "item": [
+    {
+      "id": "fa235035-391a-4391-b0bd-8fd9191d3799",
+      "name": "Roles",
+      "description": {
+        "content": "Role-based access control",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "91d4812d-9119-43ff-b28d-ab01c0fe9dab",
+          "name": "List roles",
+          "request": {
+            "name": "List roles",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get-roles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "owner",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eba22310-62c5-4fff-b001-418347ed36ba",
+              "name": "Role list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get-roles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "owner",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4554abd-f81c-4744-9b74-5c1e26759c33",
+          "name": "Create a role",
+          "request": {
+            "name": "Create a role",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "add-role"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c74b1843-23ce-46ca-921f-92dc1488ecac",
+              "name": "Create result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "add-role"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://door.casdoor.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "407a3ee9-c79b-4a8d-b26b-0ac6ddc6834c",
+    "name": "Casdoor REST Applications Roles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing\nusers, organizations, applications, roles, permissions, sessions, and OIDC/OAuth\nflows. This best-effort OpenAPI is derived from the public Swagger published at\nhttps://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.\n\n\nContact Support:\n Name: Casdoor (Casbin)\n Email: casbin@googlegroups.com",
+      "type": "text/plain"
+    }
+  }
+}

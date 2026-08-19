@@ -1,0 +1,76 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Casdoor REST Applications Authentication API",
+    "version": "1.503.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Login a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/login",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Login a user"
+        },
+        {
+          "info": {
+            "name": "Sign up a new user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/signup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sign up a new user"
+        },
+        {
+          "info": {
+            "name": "Log out the current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/logout"
+          },
+          "docs": "Log out the current user"
+        },
+        {
+          "info": {
+            "name": "OAuth 2.0 device authorization",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://door.casdoor.com/api/device-auth"
+          },
+          "docs": "OAuth 2.0 device authorization"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
