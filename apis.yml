@@ -33,6 +33,22 @@ tags:
   - LDAP
   - MCP
   - MFA
+  - OIDC
+  - Open-Source
+  - Passkeys
+  - SAML
+  - SCIM
+  - Single Sign-On
+  - SSO
+  - WebAuthn
+tags_raw:
+  - Authentication
+  - Authorization
+  - IAM
+  - Identity
+  - LDAP
+  - MCP
+  - MFA
   - OAuth
   - OIDC
   - Open Source
@@ -58,6 +74,15 @@ apis:
   humanURL: https://casdoor.ai/docs/basic/api
   baseURL: https://door.casdoor.com
   tags:
+  - Application
+  - IAM
+  - Organization
+  - REST
+  - Roles
+  - Sessions
+  - Tokens
+  - User
+  tags_raw:
   - Applications
   - IAM
   - Organizations
@@ -83,6 +108,12 @@ apis:
     used by web, mobile, native, and machine-to-machine clients to obtain ID tokens and access tokens.
   humanURL: https://casdoor.ai/docs/how-to-connect/oauth
   tags:
+  - Authentication
+  - JWT
+  - OIDC
+  - SSO
+  - Tokens
+  tags_raw:
   - Authentication
   - JWT
   - OAuth
@@ -166,6 +197,11 @@ apis:
   tags:
   - A2A
   - Agents
+  - Artificial Intelligence
+  - MCP
+  tags_raw:
+  - A2A
+  - Agents
   - AI
   - MCP
   properties:
@@ -178,6 +214,10 @@ apis:
     logout, profile changes, password resets, and MFA enrollments.
   humanURL: https://casdoor.ai/docs/integration/webhook
   tags:
+  - Event
+  - Integration
+  - Webhook
+  tags_raw:
   - Events
   - Integration
   - Webhooks
@@ -190,6 +230,8 @@ apis:
   humanURL: https://casdoor.ai/docs/basic/api
   baseURL: https://door.casdoor.com
   tags:
+  - Application
+  tags_raw:
   - Applications
   properties:
   - type: OpenAPI
@@ -220,6 +262,8 @@ apis:
   humanURL: https://casdoor.ai/docs/basic/api
   baseURL: https://door.casdoor.com
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -250,6 +294,8 @@ apis:
   humanURL: https://casdoor.ai/docs/basic/api
   baseURL: https://door.casdoor.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
