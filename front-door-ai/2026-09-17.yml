@@ -1,0 +1,31 @@
+# Front Door AI Index — casdoor — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: casdoor
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: casdoor.org
+  final_host: casdoor.ai
+  ownership: own
+  owner: casdoor
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 40
+  host_score: 40
+  density: 51.75
+  words: 773
+  tiers:
+    agentic: 23
+    core: 15
+    model: 2
+  ambiguous: 18
+  top_terms:
+    agent: 18
+    MCP: 14
+    AI: 13
+    AI agent: 9
+    LLMs: 2
+    Claude: 1
+    GPT: 1

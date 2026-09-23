@@ -1,15 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Casdoor REST Applications Users API
+  title: Casdoor REST Users API
   description: 'Casdoor is an open-source IAM/SSO platform exposing a RESTful API for managing
 
     users, organizations, applications, roles, permissions, sessions, and OIDC/OAuth
 
     flows. This best-effort OpenAPI is derived from the public Swagger published at
 
-    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.
-
-    '
+    https://door.casdoor.com/swagger/ and the documentation at https://casdoor.ai/docs/.'
   version: 1.503.0
   contact:
     name: Casdoor (Casbin)

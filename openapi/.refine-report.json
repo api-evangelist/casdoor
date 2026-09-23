@@ -1,13 +1,7 @@
 {
   "provider": "casdoor",
   "sources": [
-    "casdoor-applications-api-openapi.yml",
-    "casdoor-authentication-api-openapi.yml",
-    "casdoor-oidc-api-openapi.yml",
-    "casdoor-organizations-api-openapi.yml",
-    "casdoor-permissions-api-openapi.yml",
-    "casdoor-roles-api-openapi.yml",
-    "casdoor-users-api-openapi.yml"
+    "_original/casdoor-openapi.yml"
   ],
   "outputs": [
     "casdoor-applications-api-openapi.yml",
@@ -21,6 +15,18 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "casdoor-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "casdoor-applications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-authentication-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-oidc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-permissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-roles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "casdoor-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
