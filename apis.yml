@@ -9,17 +9,22 @@ description: Casdoor is an open-source, AI-first identity and access management 
   the Apache License 2.0.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: open-core
+  license: Apache-2.0
+  license_evidence:
+    repo: casdoor/casdoor
+    spdx: Apache-2.0
+    stars: 14471
+  open_source: true
   commercial: true
   callable_host: true
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: medium
   source:
   - openapi
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -49,7 +54,7 @@ tags:
 - MCP
 - MFA
 - OIDC
-- Open-Source
+- Open Source
 - Passkeys
 - SAML
 - SCIM
@@ -74,6 +79,7 @@ tags_raw:
 - SSO
 - WebAuthn
 - Identity Federation
+- Open-Source
 url: https://raw.githubusercontent.com/api-evangelist/casdoor/refs/heads/main/apis.yml
 created: '2026-03-25'
 modified: '2026-09-16'
