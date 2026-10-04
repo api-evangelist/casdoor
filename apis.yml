@@ -315,6 +315,9 @@ apis:
   - type: OpenAPI
     url: openapi/casdoor-users-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/casdoor-capability-edges.yml
+  name: Casdoor Business Capability Map
 - type: Releases
   url: https://github.com/casdoor/casdoor/releases
 - type: SecurityPolicy
