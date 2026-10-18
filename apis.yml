@@ -53,7 +53,7 @@ tags:
 - LDAP
 - MCP
 - MFA
-- OIDC
+- OpenID Connect
 - Open Source
 - Passkeys
 - SAML
@@ -130,7 +130,7 @@ apis:
   tags:
   - Authentication
   - JWT
-  - OIDC
+  - OpenID Connect
   - SSO
   - Tokens
   tags_raw:
@@ -266,6 +266,8 @@ apis:
   humanURL: https://casdoor.ai/docs/basic/api
   baseURL: https://door.casdoor.com
   tags:
+  - OpenID Connect
+  tags_raw:
   - OIDC
   properties:
   - type: OpenAPI
