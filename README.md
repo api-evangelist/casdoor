@@ -1,4 +1,4 @@
-# Casdoor (casdoor)
+# Casdoor
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,225 +66,145 @@
 
 Casdoor is an open-source, AI-first identity and access management (IAM) and MCP gateway authentication server with a web UI. Built in Go (Beego) with a React frontend, Casdoor supports OAuth 2.0, OIDC, SAML 2.0, CAS, LDAP, Kerberos/SPNEGO, WebAuthn / Passkeys, TOTP / MFA, SCIM 2.0 provisioning, social login, multi-tenant organizations, role-based access control, and an MCP Gateway plus A2A Protocol for agent-to-agent communication. The platform exposes a RESTful API documented via Swagger and ships SDKs for Go, Java, Python, Node.js, C#, C++, PHP, Ruby, JavaScript, Lua, and Haskell. Released under the Apache License 2.0.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/casdoor/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/casdoor/refs/heads/main/apis.yml)
+**Areas:** Authentication · Authorization · Identity and Access Management · Identity · LDAP · MCP · MFA · OpenID Connect · Open Source · Passkeys · SAML · SCIM
 
-## Scope
+## Casdoor on APIs.io
 
-- **Type:** Index
+Everything profiled for Casdoor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/casdoor/](https://apis.io/providers/casdoor/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (15)
 
-- Authentication
-- Authorization
-- IAM
-- Identity
-- LDAP
-- MCP
-- MFA
-- OAuth
-- OIDC
-- Open Source
-- Passkeys
-- SAML
-- SCIM
-- Single Sign-On
-- SSO
-- WebAuthn
+- [Casdoor REST API](https://apis.io/apis/casdoor/casdoor-rest-api/) — The Casdoor REST API provides programmatic access to the IAM platform's core resources including users, organizations, applications, roles, groups,…
+- [Casdoor OAuth 2.0 / OIDC Provider](https://apis.io/apis/casdoor/casdoor-oauth-oidc/) — Casdoor implements an OAuth 2.0 authorization server and OpenID Connect identity provider, exposing the standard authorization, token, userinfo, revocation,…
+- [Casdoor SAML 2.0 Identity Provider](https://apis.io/apis/casdoor/casdoor-saml/) — SAML 2.0 identity provider endpoints in Casdoor that issue SAML assertions to enterprise service providers, supporting SSO scenarios for legacy and…
+- [Casdoor CAS Server](https://apis.io/apis/casdoor/casdoor-cas/) — Casdoor exposes a CAS (Central Authentication Service) server compatible with CAS protocol versions 1.0, 2.0, and 3.0, providing single sign-on to…
+- [Casdoor LDAP Server](https://apis.io/apis/casdoor/casdoor-ldap/) — Casdoor provides an LDAP server interface so that legacy applications and infrastructure components requiring LDAP authentication can bind against Casdoor…
+- [Casdoor SCIM 2.0 API](https://apis.io/apis/casdoor/casdoor-scim/) — SCIM 2.0 (System for Cross-domain Identity Management) endpoints for automated user and group provisioning between Casdoor and downstream identity-aware…
+- [Casdoor MCP Gateway](https://apis.io/apis/casdoor/casdoor-mcp-gateway/) — Casdoor's MCP (Model Context Protocol) gateway and A2A (Agent-to-Agent) protocol surface, designed to broker authentication and authorization for AI agents…
+- [Casdoor Webhooks](https://apis.io/apis/casdoor/casdoor-webhooks/) — Outbound webhook events that notify external systems of identity events such as user signup, login, logout, profile changes, password resets, and MFA…
+- [Casdoor Applications API](https://apis.io/apis/casdoor/casdoor-applications-api/) — OAuth/OIDC client applications
+- [Casdoor Authentication API](https://apis.io/apis/casdoor/casdoor-authentication-api/) — Login, callback, and device authorization
+- [Casdoor OIDC API](https://apis.io/apis/casdoor/casdoor-oidc-api/) — OpenID Connect discovery and JWKS endpoints
+- [Casdoor Organizations API](https://apis.io/apis/casdoor/casdoor-organizations-api/) — Multi-tenant organization management
+- [Casdoor Permissions API](https://apis.io/apis/casdoor/casdoor-permissions-api/) — Casbin policy enforcement
+- [Casdoor Roles API](https://apis.io/apis/casdoor/casdoor-roles-api/) — Role-based access control
+- [Casdoor Users API](https://apis.io/apis/casdoor/casdoor-users-api/) — User CRUD and credential operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-25
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Casdoor REST API
+Model Context Protocol servers that expose the API to agents.
 
-The Casdoor REST API provides programmatic access to the IAM platform's core resources including users, organizations, applications, roles, groups, permissions, identity providers, tokens, sessions, certificates, adapters, syncers, webhooks, products, payments, MFA enrollments, and enforcers. The API follows RESTful conventions with JSON payloads and is documented via a hosted Swagger UI.
+- [MCP Server](https://apis.io/servers/casdoor/mcp-server/)
 
-- **Human URL:** [https://casdoor.ai/docs/basic/api](https://casdoor.ai/docs/basic/api)
-- **Base URL:** `https://door.casdoor.com`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Applications
-- IAM
-- Organizations
-- REST
-- Roles
-- Sessions
-- Tokens
-- Users
+- [Casdoor Agentic Access](https://apis.io/agentic-access/casdoor/casdoor-agentic-access/)
 
-#### Properties
+#### Collections (8)
 
-- [Documentation](https://casdoor.ai/docs/basic/api)
-- [Swagger](https://door.casdoor.com/swagger/)
-- [GitHub Repository](https://github.com/casdoor/casdoor)
-- [Authentication](https://casdoor.ai/docs/basic/core-concepts)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Casdoor OAuth 2.0 / OIDC Provider
+- [Casdoor REST API](https://apis.io/collections/casdoor/open-casdoor/)
+- [Casdoor REST Applications API](https://apis.io/collections/casdoor/open-casdoor-applications-api/)
+- [Casdoor REST Applications Authentication API](https://apis.io/collections/casdoor/open-casdoor-authentication-api/)
+- [Casdoor REST Applications OIDC API](https://apis.io/collections/casdoor/open-casdoor-oidc-api/)
+- [Casdoor REST Applications Organizations API](https://apis.io/collections/casdoor/open-casdoor-organizations-api/)
+- [Casdoor REST Applications Permissions API](https://apis.io/collections/casdoor/open-casdoor-permissions-api/)
+- [Casdoor REST Applications Roles API](https://apis.io/collections/casdoor/open-casdoor-roles-api/)
+- [Casdoor REST Applications Users API](https://apis.io/collections/casdoor/open-casdoor-users-api/)
 
-Casdoor implements an OAuth 2.0 authorization server and OpenID Connect identity provider, exposing the standard authorization, token, userinfo, revocation, introspection, JWKS, and OIDC discovery endpoints used by web, mobile, native, and machine-to-machine clients to obtain ID tokens and access tokens.
+#### Security (2)
 
-- **Human URL:** [https://casdoor.ai/docs/how-to-connect/oauth](https://casdoor.ai/docs/how-to-connect/oauth)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Casdoor Authentication](https://apis.io/security/casdoor/casdoor-authentication/)
+- [Casdoor Domain Security](https://apis.io/security/casdoor/casdoor-domain-security/)
 
-- Authentication
-- JWT
-- OAuth
-- OIDC
-- SSO
-- Tokens
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://casdoor.ai/docs/how-to-connect/oauth)
-- [Discovery](https://door.casdoor.com/.well-known/openid-configuration)
-- [Specification](https://datatracker.ietf.org/doc/html/rfc6749)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Casdoor Plans Pricing](https://apis.io/plans/casdoor/casdoor-plans-pricing/)
 
-### Casdoor SAML 2.0 Identity Provider
+#### Rate limits (1)
 
-SAML 2.0 identity provider endpoints in Casdoor that issue SAML assertions to enterprise service providers, supporting SSO scenarios for legacy and enterprise SaaS applications via standard SAML metadata, ACS, and SLO bindings.
+Published request limits.
 
-- **Human URL:** [https://casdoor.ai/docs/how-to-connect/saml](https://casdoor.ai/docs/how-to-connect/saml)
+- [Casdoor Rate Limits](https://apis.io/rate-limits/casdoor/casdoor-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Enterprise SSO
-- Federation
-- SAML
-- SSO
+What the API costs to run, by operation.
 
-#### Properties
+- [Casdoor Finops](https://apis.io/finops/casdoor/casdoor-finops/)
 
-- [Documentation](https://casdoor.ai/docs/how-to-connect/saml)
-- [Specification](http://docs.oasis-open.org/security/saml/v2.0/)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Casdoor CAS Server
-
-Casdoor exposes a CAS (Central Authentication Service) server compatible with CAS protocol versions 1.0, 2.0, and 3.0, providing single sign-on to applications that integrate via the CAS ticket-validation flow.
-
-- **Human URL:** [https://casdoor.ai/docs/how-to-connect/cas](https://casdoor.ai/docs/how-to-connect/cas)
-
-#### Tags
-
-- Authentication
-- CAS
-- SSO
-
-#### Properties
-
-- [Documentation](https://casdoor.ai/docs/how-to-connect/cas)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Casdoor LDAP Server
-
-Casdoor provides an LDAP server interface so that legacy applications and infrastructure components requiring LDAP authentication can bind against Casdoor users and groups, and a sync engine that imports users from external LDAP directories.
-
-- **Human URL:** [https://casdoor.ai/docs/ldap/overview](https://casdoor.ai/docs/ldap/overview)
-
-#### Tags
-
-- Directory
-- LDAP
-- Sync
-
-#### Properties
-
-- [Documentation](https://casdoor.ai/docs/ldap/overview)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Casdoor SCIM 2.0 API
-
-SCIM 2.0 (System for Cross-domain Identity Management) endpoints for automated user and group provisioning between Casdoor and downstream identity-aware systems.
-
-- **Human URL:** [https://casdoor.ai/docs/scim/overview](https://casdoor.ai/docs/scim/overview)
-
-#### Tags
-
-- Identity
-- Provisioning
-- SCIM
-
-#### Properties
-
-- [Documentation](https://casdoor.ai/docs/scim/overview)
-- [Specification](https://datatracker.ietf.org/doc/html/rfc7644)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Casdoor MCP Gateway
-
-Casdoor's MCP (Model Context Protocol) gateway and A2A (Agent-to-Agent) protocol surface, designed to broker authentication and authorization for AI agents and MCP-aware tooling using Casdoor as the identity provider.
-
-- **Human URL:** [https://casdoor.ai/docs/mcp/overview](https://casdoor.ai/docs/mcp/overview)
-
-#### Tags
-
-- A2A
-- Agents
-- AI
-- MCP
-
-#### Properties
-
-- [Documentation](https://casdoor.ai/docs/mcp/overview)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Casdoor Webhooks
-
-Outbound webhook events that notify external systems of identity events such as user signup, login, logout, profile changes, password resets, and MFA enrollments.
-
-- **Human URL:** [https://casdoor.ai/docs/integration/webhook](https://casdoor.ai/docs/integration/webhook)
-
-#### Tags
-
-- Events
-- Integration
-- Webhooks
-
-#### Properties
-
-- [Documentation](https://casdoor.ai/docs/integration/webhook)
-- [Postman Collection](collections/casdoor.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/casdoor.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://casdoor.org)
 - [Documentation](https://casdoor.ai/docs/overview)
-- [Getting Started](https://casdoor.ai/docs/basic/server-installation)
-- [Authentication](https://casdoor.ai/docs/basic/core-concepts)
-- [Swagger](https://door.casdoor.com/swagger/)
-- [Git Hub](https://github.com/casdoor/casdoor)
-- [GitHub Organization](https://github.com/casdoor)
-- [Source Code](https://github.com/casdoor/casdoor)
-- [Issue Tracker](https://github.com/casdoor/casdoor/issues)
-- [Blog](https://casdoor.org/blog)
-- [Community](https://casdoor.ai/docs/community/forum)
-- [Discord](https://discord.gg/5rPsrAzK7S)
-- [License](https://github.com/casdoor/casdoor/blob/master/LICENSE)
-- [Docker Hub](https://hub.docker.com/r/casbin/casdoor)
-- [Demo](https://door.casdoor.com)
-- [Privacy Policy](https://casdoor.org/privacy)
+- [Getting started](https://casdoor.ai/docs/basic/server-installation)
 - [Pricing](https://casdoor.com/pricing)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [M C P Server](https://github.com/casdoor/public-mcp-server-registry)
+- [Blog](https://casdoor.org/blog)
+- [Privacy policy](https://casdoor.org/privacy)
+- [GitHub](https://github.com/casdoor)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.7 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 7.9 |
+
+**Agent readiness 21.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/casdoor/](https://apis.io/providers/casdoor/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Casdoor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/casdoor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
